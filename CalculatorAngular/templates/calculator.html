@@ -1,0 +1,22 @@
+<section class="calculator">
+    <div class="display-box">
+        <div ng-controller="DisplayController">
+            <div ng-repeat="item in Display">
+                <display-screen input="item.inputText" result="item.resultText"></display-screen>
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <div ng-controller="NumberBtnsController">
+            <div ng-repeat="item in NumberBtnData">
+                <number-btn type="{{item.type}}" value="{{item.value}}"></number-btn>
+            </div>
+        </div>
+        <div ng-controller="OperatorBtnsController">
+            <div ng-repeat="item in OperatorBtnData">
+                <operator-btn type="{{item.type}}" value="{{item.value}}"></operator-btn>
+            </div>
+        </div>
+    </div>
+    <div ng-controller="PCBController"></div>
+</section>
